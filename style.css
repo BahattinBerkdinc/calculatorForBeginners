@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Cascadia Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+}
+
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F5FA;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    overflow: hidden;
+
+    padding: 2rem;
+
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.544);
+}
+
+
+.calculator .result-screen {
+    background-color: #F5F5FA;
+    text-align: end;
+    padding: 2rem 1rem 2rem 1rem;
+    border-bottom: 1px solid rgba(177, 172, 172, 0.299);
+
+
+    flex: 1;
+
+    font-size: 3rem;
+    color: #2a1f62;
+
+    margin-bottom: 2rem;
+}
+
+.calculator .result-screen input {
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    width: 100%;
+    padding: 1rem;
+
+    font-size: 2rem;
+
+    color: #2a1f62;
+
+    text-align: end;
+}
+
+.calculator .result-screen input::placeholder {
+    color: #2a1f62;
+    opacity: 0.6;
+    font-size: 1rem;
+}
+
+.calculator .buttons {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.calculator .buttons .btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.calculator .buttons .btn-group button,
+.calculator button {
+    margin: 1rem;
+    align-items: center;
+    background: #f5f5fa;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: -10px -10px 30px 0 #fff, 10px 10px 30px 0 #1d0dca17;
+    box-sizing: border-box;
+    color: #2a1f62;
+    cursor: pointer;
+    display: flex;
+
+    font-size: 1rem;
+    justify-content: center;
+    line-height: 1.5rem;
+    padding: 15px;
+    position: relative;
+    text-align: left;
+    transition: .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: pre;
+    width: max-content;
+    word-break: normal;
+    word-spacing: normal;
+
+    outline: none;
+}
+
+.calculator .buttons .btn-group button:hover {
+    background: #2a1f6283;
+    box-shadow: -15px -15px 30px 0 #fff, 15px 15px 30px 0 #1d0dca17;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .calculator .buttons .btn-group button {
+        padding: 24px;
+    }
+}
